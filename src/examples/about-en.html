@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - Application Title</title>
+<!-- met-0.1.0 -->
+<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="../lib/met/css/met.css" rel="stylesheet">
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../phonegap.js"></script>
+<script src="../lib/met/js/met.js"></script>
+</head>
+<body onunload="exit();">
+<header id="canadahd">
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-2 col-md-3 text-left lft">
+    <button onclick="history.go(-1);return false;" class="btn btn-head btn-sm" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+   </div>
+   <div id="canadahdtl" class="col-xs-8 col-md-6">
+    <h1><a href="index-en.html">Application Title</a></h1>
+   </div>
+   <div class="col-xs-2 col-md-3 text-right rgt"><a data-toggle="modal" href="#settingsMenu" class="btn btn-head btn-sm"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></a></div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="settingsMenu" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Settings</h4>
+     </div>
+     <div class="modal-body"> <a class="btn btn-default btn-lg btn-block" type="button" lang="fr" href="about-fr.html">Français</a> <a class="btn btn-default btn-lg btn-block" type="button" href="index-en.html">Home</a> <a class="btn btn-default btn-lg btn-block" type="button" href="about-en.html">About</a> <a class="btn btn-default btn-lg btn-block" type="button" href="terms-en.html">Terms and Conditions</a> </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+     </div>
+    </div>
+    <!-- /.modal-content --> 
+   </div>
+   <!-- /.modal-dialog --> 
+  </div>
+  <!-- /.modal --> 
+ </div>
+ <!-- /container --> 
+</header>
+<div class="container">
+
+ <h1>About</h1>
+ <p>Version X.X.X</p>
+ <p><strong><a href="#">Contact</a></strong></p>
+ <p><strong><a href="terms-en.html">Terms and Conditions</a></strong></p>
+
+</div>
+<!-- /container --> 
+<br class="clearfix">
+<footer id="wm-mw">
+ <div class="container"> <img src="../lib/met/images/canada-col.svg" onerror="this.src='../lib/met/images/canada-col.png'" alt="Symbol of the Government of Canada"> </div>
+</footer>
+</body>
+</html>

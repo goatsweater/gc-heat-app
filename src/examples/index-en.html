@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Title</title>
+<!-- met-0.1.0 -->
+<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="../lib/met/css/met.css" rel="stylesheet">
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../phonegap.js"></script>
+<script src="../lib/met/js/met.js"></script>
+<link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
+</head>
+<body onunload="exit();">
+<header id="canadahd">
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-2 col-md-3 text-left lft">
+    <button onclick="history.go(-1);return false;" class="btn btn-head btn-sm" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+   </div>
+   <div id="canadahdtl" class="col-xs-8 col-md-6">
+    <h1><a href="index-en.html">Application Title</a></h1>
+   </div>
+   <div class="col-xs-2 col-md-3 text-right rgt"><a data-toggle="modal" href="#settingsMenu" class="btn btn-head btn-sm"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></a></div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="settingsMenu" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Settings</h4>
+     </div>
+     <div class="modal-body"> <a class="btn btn-default btn-lg btn-block" type="button" lang="fr" href="index-fr.html">Français</a> <a class="btn btn-default btn-lg btn-block" type="button" href="index-en.html">Home</a> <a class="btn btn-default btn-lg btn-block" type="button" href="about-en.html">About</a> <a class="btn btn-default btn-lg btn-block" type="button" href="terms-en.html">Terms and Conditions</a> </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div>
+    </div>
+    <!-- /.modal-content --> 
+   </div>
+   <!-- /.modal-dialog --> 
+  </div>
+  <!-- /.modal --> 
+ </div>
+ <!-- /container --> 
+</header>
+<div class="container">
+
+ <section>
+  <h1>Heading 1 (<code>h1</code>)</h1>
+  <p>Quisque vitae hendrerit eros. <strong>Sed suscipit finibus nulla eget convallis</strong>. Ut interdum tincidunt quam vitae volutpat. Cras dictum nisl eu enim iaculis, quis sagittis enim porttitor. Sed gravida id diam quis dignissim.</p>
+ </section>
+ <section>
+  <h2>Heading 2 (<code>h2</code>)</h2>
+  <p>Fusce ornare interdum nisi, eget condimentum arcu lacinia eget. Sed vitae leo felis. Fusce venenatis vestibulum ipsum sit amet sagittis. Duis feugiat dolor nunc, eu aliquam orci aliquet id. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+ </section>
+ <section>
+  <h3>Heading 3 (<code>h3</code>)</h3>
+  <p>Pellentesque dignissim, lacus at ultricies varius, ligula mauris viverra massa, eu bibendum urna leo non sem. Vestibulum auctor lacus eu diam viverra, a molestie turpis iaculis. Duis ullamcorper efficitur porttitor. In sit amet sollicitudin elit, et tempus nisi. Donec sodales quis nisi non scelerisque. Maecenas gravida, odio id volutpat molestie, justo tellus fringilla lacus, quis vestibulum sem metus ornare nulla.</p>
+ </section>
+ <section>
+  <h4>Heading 4 (<code>h4</code>)</h4>
+  <p>Vivamus aliquet pellentesque neque eu condimentum. In cursus eget purus vitae feugiat. Phasellus eget purus sapien. Fusce feugiat tempor sem, nec finibus turpis malesuada scelerisque. Phasellus aliquet orci in suscipit consequat. Nunc maximus urna eu nisi dapibus finibus. Vestibulum faucibus justo maximus placerat sagittis. Cras gravida mi non eros malesuada congue. Proin dolor lacus, congue at augue at, posuere molestie risus. Nulla porttitor tortor sit amet eros dignissim, et mattis elit varius.</p>
+ </section>
+ <section>
+  <h5>Heading 5 (<code>h5</code>)</h5>
+  <p>Curabitur eget ligula massa. Integer scelerisque hendrerit ante, in lobortis dui ornare at. Suspendisse ullamcorper ante vel vulputate ornare.</p>
+ </section>
+ <section>
+  <h6>Heading 6 (<code>h6</code>)</h6>
+  <p>Nulla volutpat vel nulla eget eleifend. Phasellus sollicitudin velit at interdum pharetra. Integer posuere, est vitae cursus ullamcorper, lacus sem accumsan est, eu dictum lacus purus sit amet risus.</p>
+ </section>
+ <p><strong>Paragraph default appearance</strong></p>
+ <p> Sed quis tempus ligula. <em>Praesent vehicula dignissim nibh, ut porta felis porttitor eu</em>. Aliquam laoreet ante lacus, a malesuada leo facilisis sed. Cras nec sapien vel eros lacinia luctus id bibendum augue. Duis tristique lectus sapien, eget adipiscing magna volutpat nec. In enim tellus, auctor id velit eu, molestie lobortis nunc. Praesent consequat molestie quam, et commodo velit. Duis at turpis ut elit euismod convallis. Proin pellentesque nisl vitae tortor bibendum, a placerat velit ullamcorper. Morbi at ipsum massa. Vestibulum vitae odio accumsan, egestas risus non, pretium massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <p>Maecenas dignissim mi et sem posuere, a hendrerit ligula varius. Phasellus sit amet turpis eros. Sed ac nunc eu lorem rutrum mattis quis nec nunc. Ut eleifend massa placerat lacus feugiat tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempor nibh lorem, id vehicula leo dictum ac. Etiam iaculis condimentum nunc ut mattis. Aenean tristique a magna sit amet gravida. Curabitur sem libero, condimentum nec ante at, adipiscing venenatis dolor. Suspendisse potenti. Etiam consequat libero in lectus facilisis porttitor. Duis eu diam nec lectus condimentum fringilla vitae eu nisl. Integer adipiscing lorem eget malesuada dapibus. Nulla eu libero nec purus tristique commodo a et tellus. </p>
+ <p><a href="#">Link</a></p>
+ <p><a href="mailto:">Link (<code>mailto:</code>) - default appearance</a></p>
+ <p><a href="http://www." rel="external">Link (<code>rel="external"</code>) - default appearance</a></p>
+ <p><a href="../.doc">Link - file downloads based on file type (<code>.doc</code>, <code>.psd</code>, <code>.zip</code>, <code>.pdf</code>, <code>.xls</code>, <code>.xlt</code>, <code>.rtf</code> and <code>.txt</code> - default appearance</a></p>
+ <ul>
+  <li> unordered list (<code>ul</code>) - level 1
+   <ul>
+    <li> unordered list (<code>ul</code>) - level 2
+     <ul>
+      <li>unordered list (<code>ul</code>) - level 3</li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <ol>
+  <li>ordered list (<code>ol</code>) - level 1</li>
+  <li> ordered list (<code>ol</code>) - level 1
+   <ol>
+    <li>ordered list (<code>ol</code>) - level 2</li>
+    <li> ordered list (<code>ol</code>) - level 2
+     <ol>
+      <li>ordered list (<code>ol</code>) - level 3</li>
+      <li>ordered list (<code>ol</code>) - level 3</li>
+     </ol>
+    </li>
+   </ol>
+  </li>
+ </ol>
+ <table class="table table-bordered table-striped">
+  <caption>
+  Table caption
+  </caption>
+  <thead>
+   <tr>
+    <th scope="col">Table header (<code>th</code>)</th>
+    <th scope="col">Table header (<code>th</code>)</th>
+    <th scope="col">Table header (<code>th</code>)</th>
+    <th scope="col">Table header (<code>th</code>)</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+   </tr>
+   <tr>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+   </tr>
+   <tr>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+    <td>Table data (<code>td</code>)</td>
+   </tr>
+  </tbody>
+ </table>
+ <form method="post" action="#" class="form-horizontal">
+  <div class="form-group">
+   <label for="data1" class="col-sm-3 control-label">Form (<code>input</code>):</label>
+   <div class="col-sm-9">
+    <input type="text" id="data1" name="data1" class="form-control">
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="data2" class="col-sm-3 control-label">Form (<code>textarea</code>):</label>
+   <div class="col-sm-9">
+    <textarea id="data2" rows="3" cols="15" name="data2" class="form-control"></textarea>
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="data4" class="col-sm-3 control-label">Form (<code>select</code>):</label>
+   <div class="col-sm-9">
+    <select name="data4" id="data4" class="form-control">
+     <option value="Option 1">Option 1</option>
+     <option value="Option 2">Option 2</option>
+     <option value="Option 3">Option 3</option>
+     <option value="Option 4">Option 4</option>
+    </select>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="col-sm-offset-3 col-sm-9">
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </div>
+  </div>
+ </form>
+ <blockquote>
+  <p>"<code>blockquote</code>"</p>
+ </blockquote>
+
+</div>
+<!-- /container --> 
+<br class="clearfix">
+<footer id="wm-mw">
+ <div class="container"> <img src="../lib/met/images/canada-col.svg" onerror="this.src='../lib/met/images/canada-col.png'" alt="Symbol of the Government of Canada"> </div>
+</footer>
+</body>
+</html>

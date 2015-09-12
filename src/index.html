@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application Title | Titre de l'application</title>
+<!-- met-0.1.0 -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="lib/met/css/met.css" rel="stylesheet">
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="phonegap.js"></script>
+<script src="lib/met/js/met.js"></script>
+<link href="lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
+</head>
+<body onunload="exit();">
+<header role="banner">
+ <div class="container">
+ 
+  <div class="text-center"> <img src="lib/met/images/goc-gdc-col-en.svg" onerror="this.src='lib/met/images/goc-gdc-col-en.png'" alt="Government of Canada | Gouvernement du Canada" class="fip"> </div>
+ </div>
+</header>
+<div class="container" id="splash">
+ <div class="row">
+  <div class="col-sm-6 col-md-6 text-center maintitles">
+   <h1>Application Title [En]</h1>
+  </div>
+  <div class="col-sm-6 col-md-6 text-center maintitles" lang="fr">
+   <h1>Titre de l'application [Fr]</h1>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-xs-6 col-md-6"> <a class="btn btn-lg btn-primary btn-block" href="examples/index-en.html"><strong>English</strong></a> <a class="btn btn-default btn-block" href="examples/terms-en.html">Terms and Conditions</a> </div>
+  <div class="col-xs-6 col-md-6" lang="fr"> <a class="btn btn-lg btn-primary btn-block" href="examples/index-fr.html"><strong>Français</strong></a> <a class="btn btn-default btn-block" href="examples/terms-fr.html">Avis</a> </div>
+ </div>
+ <p class="text-center ver"><small>Version X.X</small></p>
+</div>
+
+<br class="clearfix">
+<footer id="wm-mw">
+ <div class="container"> <img src="lib/met/images/canada-col.svg" onerror="this.src='lib/met/images/canada-col.png'" alt="Symbol of the Government of Canada | Symbole du gouvernement du Canada"> </div>
+</footer>
+</body>
+</html>

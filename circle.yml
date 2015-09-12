@@ -1,0 +1,21 @@
+machine:
+  node:
+    version: 0.12.0
+
+test:
+  pre:
+    - grunt jshint:met
+
+deployment:
+  default:
+    branch: [master]
+    commands:
+      - grunt phonegap
+      - grunt compress:release
+      - grunt github-release:phonegap --GITHUB_USER=$GITHUB_USER --GITHUB_PASSWD=$GITHUB_PASSWD
+      - grunt phonegap-build --PGB_TOKEN=$PGB_TOKEN
+      - grunt web
+      - grunt sshexec --DEV_SERVER_ADDRESS=$DEV_SERVER_ADDRESS --DEV_SERVER_USER=$DEV_SERVER_USER --DEV_SERVER_PW=$DEV_SERVER_PW
+      - grunt sftp --DEV_SERVER_ADDRESS=$DEV_SERVER_ADDRESS --DEV_SERVER_USER=$DEV_SERVER_USER --DEV_SERVER_PW=$DEV_SERVER_PW
+      - grunt compress:web
+      - grunt github-release:web --GITHUB_USER=$GITHUB_USER --GITHUB_PASSWD=$GITHUB_PASSWD
