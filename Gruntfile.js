@@ -38,12 +38,14 @@ module.exports = function (grunt) {
 			web: {
 				files: [
 					{ expand: true, cwd: "src/", src: "assets/**", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "examples/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/bootstrap/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/fonts/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/images/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/jquery.min.js", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" }
+					{ expand: true, cwd: "src/", src: "lib/flu_points.json", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "map.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" }
 				]
 			}
 		},
@@ -187,7 +189,7 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'dist/lib/met/js/met.js': ["src/lib/met/js/met.js"]
-				}	
+				}
 			},
 			phonegap:{
 				options: {
