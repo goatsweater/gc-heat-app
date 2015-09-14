@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEAT</title>
+<!-- met-0.1.0 -->
+<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="../lib/met/css/met.css" rel="stylesheet">
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../phonegap.js"></script>
+<script src="../lib/met/js/met.js"></script>
+<link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
+</head>
+<body onunload="exit();">
+<header id="canadahd">
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-2 col-md-3 text-left lft">
+    <button onclick="history.go(-1);return false;" class="btn btn-head btn-sm" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+   </div>
+   <div id="canadahdtl" class="col-xs-8 col-md-6">
+    <h1><a href="index-en.html">HEAT</a></h1>
+   </div>
+   <div class="col-xs-2 col-md-3 text-right rgt"><a data-toggle="modal" href="#settingsMenu" class="btn btn-head btn-sm"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></a></div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="settingsMenu" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Settings</h4>
+     </div>
+     <div class="modal-body"> <a class="btn btn-default btn-lg btn-block" type="button" lang="fr" href="index-fr.html">Français</a> <a class="btn btn-default btn-lg btn-block" type="button" href="index-en.html">Home</a> <a class="btn btn-default btn-lg btn-block" type="button" href="about-en.html">About</a> <a class="btn btn-default btn-lg btn-block" type="button" href="terms-en.html">Terms and Conditions</a> </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div>
+    </div>
+    <!-- /.modal-content -->
+   </div>
+   <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+ </div>
+ <!-- /container -->
+</header>
+<div class="container">
+
+  <section id="step1" class="panel panel-default">
+    <div class="panel-heading">Symptoms Survey</div>
+    <div class="panel-body">
+      <p>Please help us to track flu by telling us how you are feeling today.</p>
+      <p>
+        <a href="#" title="Start survey" class="btn btn-default">Get Started</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="step2" class="panel panel-default">
+    <div class="panel-heading">Basic Information</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="userAge">Age</label>
+        <input type="number" name="userAge" id="userAge">
+      </div>
+      <hr>
+      <div class="form-group">
+        <label>
+          <input type="radio" name="sex" value="male">
+          Male
+        </label>
+        <label>
+          <input type="radio" name="sex" value="female">
+          Female
+        </label>
+      </div>
+      <hr>
+      <div class="form-group">
+        <h2>Flu Vaccine</h2>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="vaccinated">
+            Did you receive the annual flu vaccine this year?
+          </label>
+        </div>
+    </div>
+  </section>
+
+  <section id="step3" class="panel panel-default">
+    <div class="panel-heading">Which Symptoms Do You Have</div>
+    <div class="panel-body">
+      <h2>Cough</h2>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="cough" id="hasCough">
+          A cough and/or sore throat
+        </label>
+      </div>
+
+      <hr>
+
+      <h2>Fever</h2>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="fever" id="hasFever">
+          A 36&deg;C or higher fever or feeling feverish
+        </label>
+      </div>
+
+      <hr>
+
+      <h2>Headaches</h2>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="headache" id="hasHeadache">
+          Headaches and/or body aches
+        </label>
+      </div>
+
+      <hr>
+
+      <p><a href="#" class="btn btn-default">Next</a></p>
+
+    </div>
+  </section>
+
+  <section id="step4">
+    <div class="form-group">
+      <p>Did your cough and/or fever develop suddenly over a few hours?</p>
+      <label>
+        <input type="radio" name="suddensickness" value="Yes"> Yes
+      </label>
+      <label>
+        <input type="radio" name="suddensickness" value="No"> No
+      </label>
+      <label>
+        <input type="radio" name="suddensickness" value="Unsure"> Don't know/can't remember
+      </label>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <p>Did you have any of the following symptoms? Check all that apply.</p>
+      <label>
+        <input type="checkbox" name="sorethroat"> Sore throat
+      </label>
+      <label>
+        <input type="checkbox" name="jointpain"> Join pain
+      </label>
+      <label>
+        <input type="checkbox" name="musclepain"> Muscle pain
+      </label>
+      <label>
+        <input type="checkbox" name="fatigue"> Fatigue/exhaustion
+      </label>
+      <lable>
+        <input type="checkbox" name="stomachproblem"> Diarrhea/vomiting/stomach ache
+      </label>
+    </div>
+  </section>
+
+  <section id="step5">
+    <div class="form-group">
+      <p>Did you take time off work or were unable to perform normal activities due to fever and cough?</p>
+      <label>
+        <input type="radio" name="offsick" value="Yes"> Yes
+      </label>
+      <label>
+        <input type="radio" name="offsick" value="No"> No
+      </label>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <p>How many days did you take off work or were unable to perform normal activies?</p>
+      <label>
+        <input type="radio" name="timeoff" value="1"> 1-2 days
+      </label>
+      <label>
+        <input type="radio" name="timeoff" value="2"> 3-4 days
+      </label>
+      <label>
+        <input type="radio" name="timeoff" value="3"> 5+ days
+      </label>
+    </div>
+  </section>
+
+  <section id="step6">
+    <div class="form-group">
+      <p>Did you seek health advice from a health care processional?</p>
+      <label>
+        <input type="radio" name="seekadvice" value="Yes"> Yes
+      </label>
+      <label>
+        <input type="radio" name="seekadvice" value="No"> No
+      </label>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <p>Where did you go? Check all that apply.</p>
+      <label>
+        <input type="checkbox" name="advicedoctor"> General practitioner (GP)/Family Doctor or Nurse Practitioner or Registered Nurse (RN)
+      </label>
+      <label>
+        <input type="checkbox" name="adviceemerg"> Emergency department
+      </lable>
+      <label>
+        <input type="checkbox" name="advicehospital"> Admitted to hospital
+      </label>
+      <label>
+        <input type="checkbox" name="advicehotline"> 24-hour health advice hotline (Telehealth)
+      </label>
+      <label>
+        <input type="checkbox" name="adviceother"> Other healthcare professional
+      </label>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <p>Did you have a Flu Test (usually nose or throat swab)?</p>
+      <label>
+        <input type="radio" name="flutest" value="no"> No
+      </label>
+      <label>
+        <input type="radio" name="flutest" value="negative"> Yes, <em>negative</em> result
+      </label>
+      <label>
+        <input type="radio" name="flutest" value="positive"> Yes, <em>positive</em> result
+      </label>
+      <label>
+        <input type="radio" name="flutest" value="noresult"> Yes, but don't know result
+      </label>
+      <label>
+        <input type="radio" name="flutest" value="unknow"> Don't know if I had a flu test
+      </label>
+    </div>
+  </section>
+
+ <form method="post" action="#" class="form-horizontal">
+  <div class="form-group">
+   <label for="data1" class="col-sm-3 control-label">Form (<code>input</code>):</label>
+   <div class="col-sm-9">
+    <input type="text" id="data1" name="data1" class="form-control">
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="data2" class="col-sm-3 control-label">Form (<code>textarea</code>):</label>
+   <div class="col-sm-9">
+    <textarea id="data2" rows="3" cols="15" name="data2" class="form-control"></textarea>
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="data4" class="col-sm-3 control-label">Form (<code>select</code>):</label>
+   <div class="col-sm-9">
+    <select name="data4" id="data4" class="form-control">
+     <option value="Option 1">Option 1</option>
+     <option value="Option 2">Option 2</option>
+     <option value="Option 3">Option 3</option>
+     <option value="Option 4">Option 4</option>
+    </select>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="col-sm-offset-3 col-sm-9">
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </div>
+  </div>
+ </form>
+ <blockquote>
+  <p>"<code>blockquote</code>"</p>
+ </blockquote>
+
+</div>
+<!-- /container -->
+<br class="clearfix">
+<footer id="wm-mw">
+ <div class="container"> <img src="../lib/met/images/canada-col.svg" onerror="this.src='../lib/met/images/canada-col.png'" alt="Symbol of the Government of Canada"> </div>
+</footer>
+</body>
+</html>
