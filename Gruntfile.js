@@ -43,6 +43,7 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: "src/", src: "lib/met/images/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/jquery.min.js", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/flu_points.json", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/survey.js", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "map.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" },
