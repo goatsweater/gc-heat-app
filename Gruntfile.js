@@ -45,7 +45,10 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: "src/", src: "lib/flu_points.json", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "map.html", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" }
+					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "index-fr.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "about-en.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" }
 				]
 			}
 		},
