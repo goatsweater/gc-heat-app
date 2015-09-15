@@ -71,11 +71,15 @@ L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
           }).addTo(map);
 
 // Load the fake flu points (ottawa)
-$.getJSON('/lib/flu_points.json', function (data) {
+var fluIcon = L.divIcon({className: 'glyphicon glyphicon-map-marker' });
+$.getJSON('lib/flu_points.json', function (data) {
   console.log("flu points loaded");
   L.geoJson(data, {
-                onEachFeature: function (feature, layer) {
-                    layer.bindPopup(feature.properties.id);
+                // onEachFeature: function (feature, layer) {
+                //     layer.bindPopup(feature.properties.id);
+                // },
+                pointToLayer: function (feature, latlng) {
+                  return L.marker(latlng, {icon: fluIcon});
                 }
             }).addTo(map);
 });
