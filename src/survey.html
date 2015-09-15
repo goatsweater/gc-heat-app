@@ -13,6 +13,7 @@
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../phonegap.js"></script>
 <script src="../lib/met/js/met.js"></script>
+<script src="../lib/survey.js"></script>
 <link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
 </head>
 <body onunload="exit();">
@@ -55,7 +56,7 @@
     <div class="panel-body">
       <p>Please help us to track flu by telling us how you are feeling today.</p>
       <p>
-        <a href="#" title="Start survey" class="btn btn-default">Get Started</a>
+        <a href="#" title="Start survey" class="btn btn-default btn-block">Get Started</a>
       </p>
     </div>
   </section>
@@ -84,7 +85,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" name="vaccinated">
-            Did you receive the annual flu vaccine this year?
+            Received the annual flu vaccine this year?
           </label>
         </div>
     </div>
@@ -128,123 +129,141 @@
     </div>
   </section>
 
-  <section id="step4">
-    <div class="form-group">
-      <p>Did your cough and/or fever develop suddenly over a few hours?</p>
-      <label>
-        <input type="radio" name="suddensickness" value="Yes"> Yes
-      </label>
-      <label>
-        <input type="radio" name="suddensickness" value="No"> No
-      </label>
-      <label>
-        <input type="radio" name="suddensickness" value="Unsure"> Don't know/can't remember
-      </label>
-    </div>
+  <section id="step4" class="panel panel-default">
+    <div class="panel-body">
+      <div class="form-group">
+        <p>Did your cough and/or fever develop suddenly over a few hours?</p>
+        <label>
+          <input type="radio" name="suddensickness" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="suddensickness" value="No"> No
+        </label>
+        <label>
+          <input type="radio" name="suddensickness" value="Unsure"> Don't know/can't remember
+        </label>
+      </div>
 
-    <hr>
+      <hr>
 
-    <div class="form-group">
-      <p>Did you have any of the following symptoms? Check all that apply.</p>
-      <label>
-        <input type="checkbox" name="sorethroat"> Sore throat
-      </label>
-      <label>
-        <input type="checkbox" name="jointpain"> Join pain
-      </label>
-      <label>
-        <input type="checkbox" name="musclepain"> Muscle pain
-      </label>
-      <label>
-        <input type="checkbox" name="fatigue"> Fatigue/exhaustion
-      </label>
-      <lable>
-        <input type="checkbox" name="stomachproblem"> Diarrhea/vomiting/stomach ache
-      </label>
-    </div>
-  </section>
-
-  <section id="step5">
-    <div class="form-group">
-      <p>Did you take time off work or were unable to perform normal activities due to fever and cough?</p>
-      <label>
-        <input type="radio" name="offsick" value="Yes"> Yes
-      </label>
-      <label>
-        <input type="radio" name="offsick" value="No"> No
-      </label>
-    </div>
-
-    <hr>
-
-    <div class="form-group">
-      <p>How many days did you take off work or were unable to perform normal activies?</p>
-      <label>
-        <input type="radio" name="timeoff" value="1"> 1-2 days
-      </label>
-      <label>
-        <input type="radio" name="timeoff" value="2"> 3-4 days
-      </label>
-      <label>
-        <input type="radio" name="timeoff" value="3"> 5+ days
-      </label>
+      <div class="form-group">
+        <p>Did you have any of the following symptoms? Check all that apply.</p>
+        <label>
+          <input type="checkbox" name="sorethroat"> Sore throat
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="jointpain"> Join pain
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="musclepain"> Muscle pain
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="fatigue"> Fatigue/exhaustion
+        </label>
+        <br>
+        <lable>
+          <input type="checkbox" name="stomachproblem"> Diarrhea/vomiting/stomach ache
+        </label>
+      </div>
     </div>
   </section>
 
-  <section id="step6">
-    <div class="form-group">
-      <p>Did you seek health advice from a health care processional?</p>
-      <label>
-        <input type="radio" name="seekadvice" value="Yes"> Yes
-      </label>
-      <label>
-        <input type="radio" name="seekadvice" value="No"> No
-      </label>
-    </div>
+  <section id="step5" class="panel panel-default">
+    <div class="panel-body">
+      <div class="form-group">
+        <p>Did you take time off work or were unable to perform normal activities due to fever and cough?</p>
+        <label>
+          <input type="radio" name="offsick" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="offsick" value="No"> No
+        </label>
+      </div>
 
-    <hr>
+      <hr>
 
-    <div class="form-group">
-      <p>Where did you go? Check all that apply.</p>
-      <label>
-        <input type="checkbox" name="advicedoctor"> General practitioner (GP)/Family Doctor or Nurse Practitioner or Registered Nurse (RN)
-      </label>
-      <label>
-        <input type="checkbox" name="adviceemerg"> Emergency department
-      </lable>
-      <label>
-        <input type="checkbox" name="advicehospital"> Admitted to hospital
-      </label>
-      <label>
-        <input type="checkbox" name="advicehotline"> 24-hour health advice hotline (Telehealth)
-      </label>
-      <label>
-        <input type="checkbox" name="adviceother"> Other healthcare professional
-      </label>
-    </div>
-
-    <hr>
-
-    <div class="form-group">
-      <p>Did you have a Flu Test (usually nose or throat swab)?</p>
-      <label>
-        <input type="radio" name="flutest" value="no"> No
-      </label>
-      <label>
-        <input type="radio" name="flutest" value="negative"> Yes, <em>negative</em> result
-      </label>
-      <label>
-        <input type="radio" name="flutest" value="positive"> Yes, <em>positive</em> result
-      </label>
-      <label>
-        <input type="radio" name="flutest" value="noresult"> Yes, but don't know result
-      </label>
-      <label>
-        <input type="radio" name="flutest" value="unknow"> Don't know if I had a flu test
-      </label>
+      <div class="form-group">
+        <p>How many days did you take off work or were unable to perform normal activies?</p>
+        <label>
+          <input type="radio" name="timeoff" value="1"> 1-2 days
+        </label>
+        <label>
+          <input type="radio" name="timeoff" value="2"> 3-4 days
+        </label>
+        <label>
+          <input type="radio" name="timeoff" value="3"> 5+ days
+        </label>
+      </div>
     </div>
   </section>
 
+  <section id="step6" class="panel panel-default">
+    <div class="panel-body">
+      <div class="form-group">
+        <p>Did you seek health advice from a health care processional?</p>
+        <label>
+          <input type="radio" name="seekadvice" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="seekadvice" value="No"> No
+        </label>
+      </div>
+
+      <hr>
+
+      <div class="form-group">
+        <p>Where did you go? Check all that apply.</p>
+        <label>
+          <input type="checkbox" name="advicedoctor"> General practitioner (GP)/Family Doctor or Nurse Practitioner or Registered Nurse (RN)
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="adviceemerg"> Emergency department
+        </lable>
+        <br>
+        <label>
+          <input type="checkbox" name="advicehospital"> Admitted to hospital
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="advicehotline"> 24-hour health advice hotline (Telehealth)
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="adviceother"> Other healthcare professional
+        </label>
+      </div>
+
+      <hr>
+
+      <div class="form-group">
+        <p>Did you have a Flu Test (usually nose or throat swab)?</p>
+        <label>
+          <input type="radio" name="flutest" value="no"> No
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="flutest" value="negative"> Yes, <em>negative</em> result
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="flutest" value="positive"> Yes, <em>positive</em> result
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="flutest" value="noresult"> Yes, but don't know result
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="flutest" value="unknow"> Don't know if I had a flu test
+        </label>
+      </div>
+    </div>
+  </section>
+<!--
  <form method="post" action="#" class="form-horizontal">
   <div class="form-group">
    <label for="data1" class="col-sm-3 control-label">Form (<code>input</code>):</label>
@@ -278,7 +297,7 @@
  <blockquote>
   <p>"<code>blockquote</code>"</p>
  </blockquote>
-
+-->
 </div>
 <!-- /container -->
 <br class="clearfix">
