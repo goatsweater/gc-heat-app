@@ -49,7 +49,12 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index-fr.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "about-en.html", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" }
+					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "settings.html", dest: "dist/" },
+					//{ expand: true, cwd: "src/", src: "vacsites.html", dest: "dist/" },
+					//{ expand: true, cwd: "src/", src: "stats.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "notices.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "fluinfo.html", dest: "dist/" }
 				]
 			}
 		},
