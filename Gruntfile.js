@@ -39,6 +39,7 @@ module.exports = function (grunt) {
 				files: [
 					{ expand: true, cwd: "src/", src: "assets/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/bootstrap/**", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/font-awesome-4.4.0/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/fonts/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/images/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/jquery.min.js", dest: "dist/" },
