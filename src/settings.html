@@ -13,6 +13,7 @@
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../phonegap.js"></script>
 <script src="../lib/met/js/met.js"></script>
+<script src="../lib/heat.js"></script>
 <link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
 </head>
 <body onunload="exit();">
@@ -61,21 +62,21 @@
         <div class="form-group">
           <label for="userage" class="col-sm-3 col-xs-5 control-label">Birth Year</label>
           <div class="col-sm-9 col-xs-7">
-            <input type="number" id="userage" name="userage" class="form-control">
+            <input type="number" id="userage" name="userage" class="form-control" placeholder="1982">
           </div>
         </div>
         <hr>
         <div class="form-group">
-          <span class="col-sm-3 col-xs-5">Track Level</span>
+          <label class="col-sm-3 col-xs-5">Track Level</label>
           <div class="col-sm-9 col-xs-7">
             <!--<button type="button" id="track">Only on submit</button>-->
             <label>
-              <input type="radio" id="tracklvl" name="tracklvl"> Only on submit
+              <input type="radio" id="tracklvl1" name="tracklvl" value="0"> Only on submit
             </label>
           </div>
           <div class="col-xs-offset-5 col-xs-7">
             <label>
-              <input type="radio" id="tracklvl2" name="tracklvl"> Always
+              <input type="radio" id="tracklvl2" name="tracklvl" value="1"> Always
             </label>
           </div>
         </div>
