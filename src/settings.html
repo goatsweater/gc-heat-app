@@ -8,12 +8,12 @@
 <!-- met-0.1.0 -->
 <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/lib/font-awesome-4.4.0/css/font-awesome.min.css">
 <link href="../lib/met/css/met.css" rel="stylesheet">
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../phonegap.js"></script>
 <script src="../lib/met/js/met.js"></script>
+<script src="../lib/heat.js"></script>
 <link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
 </head>
 <body onunload="exit();">
@@ -21,7 +21,7 @@
  <div class="container">
   <div class="row">
    <div class="col-xs-2 col-md-3 text-left lft">
-    <!--<button onclick="history.go(-1);return false;" class="btn btn-head btn-sm" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>-->
+    <button onclick="history.go(-1);return false;" class="btn btn-head btn-sm" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
    </div>
    <div id="canadahdtl" class="col-xs-8 col-md-6">
     <h1><a href="index.html">HEAT</a></h1>
@@ -55,24 +55,40 @@
  <!-- /container -->
 </header>
 <div class="container content">
-
-  <section>
-    <!--<div class="list-group">-->
-      <a href="survey.html" class="btn btn-default btn-block btn-lg">
-          <i class="fa fa-heartbeat fa-fw fa-lg"></i>
-        Health Survey
-      </a>
-      <a href="fluinfo.html" class="btn btn-default btn-block btn-lg">
-          <i class="fa fa-map fa-fw fa-lg"></i>
-        Flu Info
-      </a>
-      <a href="settings.html" class="btn btn-default btn-block btn-lg">
-          <i class="fa fa-cog fa-fw fa-lg"></i>
-        My Account
-      </a>
-    <!--</div>-->
-  </section>
-
+  <form class="form-horizontal">
+    <section class="panel panel-default">
+      <div class="panel-heading">Personal Info</div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="userage" class="col-sm-3 col-xs-5 control-label">Birth Year</label>
+          <div class="col-sm-9 col-xs-7">
+            <input type="number" id="userage" name="userage" class="form-control" placeholder="1982">
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label class="col-sm-3 col-xs-5">Track Level</label>
+          <div class="col-sm-9 col-xs-7">
+            <!--<button type="button" id="track">Only on submit</button>-->
+            <label>
+              <input type="radio" id="tracklvl1" name="tracklvl" value="0"> Only on submit
+            </label>
+          </div>
+          <div class="col-xs-offset-5 col-xs-7">
+            <label>
+              <input type="radio" id="tracklvl2" name="tracklvl" value="1"> Always
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="panel panel-default">
+      <div class="panel-heading">Rewards</div>
+      <div class="panel-body">
+        <p>Your current rewards status...</p>
+      </div>
+    </section>
+  </form>
 </div>
 <!-- /container -->
 <br class="clearfix">

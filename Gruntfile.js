@@ -39,17 +39,23 @@ module.exports = function (grunt) {
 				files: [
 					{ expand: true, cwd: "src/", src: "assets/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/bootstrap/**", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/font-awesome-4.4.0/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/fonts/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/met/images/**", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/jquery.min.js", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/flu_points.json", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "lib/survey.js", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/heat.js", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "map.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "survey.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index-fr.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "about-en.html", dest: "dist/" },
-					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" }
+					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "settings.html", dest: "dist/" },
+					//{ expand: true, cwd: "src/", src: "vacsites.html", dest: "dist/" },
+					//{ expand: true, cwd: "src/", src: "stats.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "notices.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "fluinfo.html", dest: "dist/" }
 				]
 			}
 		},

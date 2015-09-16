@@ -8,12 +8,13 @@
 <!-- met-0.1.0 -->
 <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/lib/font-awesome-4.4.0/css/font-awesome.min.css">
 <link href="../lib/met/css/met.css" rel="stylesheet">
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="../phonegap.js"></script>
 <script src="../lib/met/js/met.js"></script>
-<script src="../lib/survey.js"></script>
+<script src="../lib/heat.js"></script>
 <link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
 </head>
 <body onunload="exit();">
@@ -104,6 +105,28 @@
   </section>
 
   <section id="step3" class="panel panel-default hidden">
+    <div class="panel-heading">How do you feel today?</div>
+    <div class="panel-body">
+      <button type="button" class="btn btn-default btn-block">
+        <i class="fa fa-smile-o fa-4x"></i>
+      </button>
+      <button type="button" class="btn btn-default btn-block">
+        <i class="fa fa-meh-o fa-4x"></i>
+      </button>
+      <button type="button" class="btn btn-default btn-block">
+        <i class="fa fa-frown-o fa-4x"></i>
+      </button>
+
+      <hr>
+
+      <p>
+        <a href="#" title="Next step" class="btn btn-default btn-block" onclick="HEAT.survey.nextStep();">Continue</a>
+      </p>
+    </div>
+  </section>
+
+<!--
+  <section id="step3" class="panel panel-default hidden">
     <div class="panel-heading">Which Symptoms Do You Have</div>
     <div class="panel-body">
       <h2>Cough</h2>
@@ -142,6 +165,7 @@
 
     </div>
   </section>
+-->
 
   <section id="step4" class="panel panel-default hidden">
     <div class="panel-body">
