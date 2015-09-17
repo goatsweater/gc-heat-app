@@ -29,10 +29,10 @@ var HEAT = {
         return true;
       } else {
         return false;
-      },
-      done: function() {
-        HEAT.survey.currentStep = 1;
       }
+    },
+    done: function() {
+      HEAT.survey.currentStep = 1;
     }
   }
 }
