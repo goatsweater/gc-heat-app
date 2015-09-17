@@ -77,11 +77,11 @@
       <hr>
       <div class="form-group">
         <label>
-          <input type="radio" name="sex" value="male" required>
+          <input type="radio" name="sex" id="usersex1" value="male" required>
           Male
         </label>
         <label>
-          <input type="radio" name="sex" value="female" required>
+          <input type="radio" name="sex" id="usersex2" value="female" required>
           Female
         </label>
       </div>
@@ -90,7 +90,7 @@
         <h2>Flu Vaccine</h2>
         <div class="checkbox">
           <label>
-            <input type="checkbox" name="vaccinated">
+            <input type="checkbox" name="vaccinated" id="vaccinated">
             Received the annual flu vaccine this year?
           </label>
         </div>
@@ -107,25 +107,25 @@
   <section id="step3" class="panel panel-default hidden">
     <div class="panel-heading">How do you feel today?</div>
     <div class="panel-body">
-      <button type="button" class="btn btn-default btn-block">
+      <button type="button" class="btn btn-default btn-block" onclick="HEAT.survey.done();">
         <i class="fa fa-smile-o fa-4x"></i>
       </button>
-      <button type="button" class="btn btn-default btn-block">
+      <button type="button" class="btn btn-default btn-block" onclick="HEAT.survey.nextStep();">
         <i class="fa fa-meh-o fa-4x"></i>
       </button>
-      <button type="button" class="btn btn-default btn-block">
+      <button type="button" class="btn btn-default btn-block" onclick="HEAT.survey.nextStep();">
         <i class="fa fa-frown-o fa-4x"></i>
       </button>
-
+<!--
       <hr>
 
       <p>
         <a href="#" title="Next step" class="btn btn-default btn-block" onclick="HEAT.survey.nextStep();">Continue</a>
       </p>
+-->
     </div>
   </section>
 
-<!--
   <section id="step3" class="panel panel-default hidden">
     <div class="panel-heading">Which Symptoms Do You Have</div>
     <div class="panel-body">
@@ -165,7 +165,7 @@
 
     </div>
   </section>
--->
+
 
   <section id="step4" class="panel panel-default hidden">
     <div class="panel-body">
