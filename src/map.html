@@ -84,7 +84,7 @@ $.getJSON('lib/flu_points.json', function (data) {
                 //     layer.bindPopup(feature.properties.id);
                 // },
                 pointToLayer: function (feature, latlng) {
-                  return L.marker(latlng, {icon: fluIcon});
+                  return L.circleMarker(latlng, {color: '#f22c6e', fill: false});
                 }
             }).addTo(map);
 });
