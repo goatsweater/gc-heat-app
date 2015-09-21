@@ -68,7 +68,7 @@
 
 <script>
 // Provision a map
-var map = L.map('map').setView([45.4, -75.72], 8);
+var map = L.map('map'); //.setView([45.4, -75.72], 8);
 
 // Put a baselayer on the map
 L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
@@ -88,7 +88,7 @@ $.getJSON('lib/flu_points.json', function (data) {
                 }
             }).addTo(map);
 });
-
+map.locate({setView: true, maxZoom: 16});
 </script>
 
 
