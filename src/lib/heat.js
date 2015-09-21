@@ -33,6 +33,8 @@ var HEAT = {
     },
     done: function() {
       HEAT.survey.currentStep = 1;
+      $('#step3').addClass('hidden');
+      window.location.href = 'http://' + window.location.hostname +  '/map.html';
     }
   }
 }
