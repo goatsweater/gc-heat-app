@@ -19,11 +19,8 @@ var HEAT = {
     },
     userInfoDefined: function () {
       var usersex = localStorage["settings.usersex"];
-      console.log(usersex);
       var userage = localStorage["settings.userage"];
-      console.log(userage);
       var vaccinated = localStorage["survey.vaccinated"];
-      console.log(vaccinated);
 
       if (userage && usersex && vaccinated) {
         return true;
