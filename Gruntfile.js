@@ -45,6 +45,8 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: "src/", src: "lib/jquery.min.js", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/flu_points.json", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/heat.js", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/d3.min.js", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "lib/canada_data.csv", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/imgs/tims.png", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "lib/imgs/petro.png", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "index.html", dest: "dist/" },
@@ -54,7 +56,7 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: "src/", src: "about-en.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "terms-en.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "settings.html", dest: "dist/" },
-					//{ expand: true, cwd: "src/", src: "vacsites.html", dest: "dist/" },
+					{ expand: true, cwd: "src/", src: "vacsites.html", dest: "dist/" },
 					//{ expand: true, cwd: "src/", src: "stats.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "notices.html", dest: "dist/" },
 					{ expand: true, cwd: "src/", src: "fluinfo.html", dest: "dist/" }
