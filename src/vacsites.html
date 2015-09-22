@@ -9,6 +9,7 @@
 <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+<link rel="stylesheet" href="/lib/font-awesome-4.4.0/css/font-awesome.min.css">
 <link href="../lib/met/css/met.css" rel="stylesheet">
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
@@ -78,7 +79,6 @@ L.tileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
 // Load the fake flu points (ottawa)
 var fluIcon = L.divIcon({className: 'fa fa-medkit' });
 $.getJSON('lib/flu_points.json', function (data) {
-  console.log("flu points loaded for vaccination sites");
   L.geoJson(data, {
                 // onEachFeature: function (feature, layer) {
                 //     layer.bindPopup(feature.properties.id);
@@ -88,7 +88,7 @@ $.getJSON('lib/flu_points.json', function (data) {
                 }
             }).addTo(map);
 });
-map.locate({setView: true, maxZoom: 16});
+map.locate({setView: true, maxZoom: 9});
 </script>
 
 
