@@ -8,13 +8,30 @@
 <!-- met-0.1.0 -->
 <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/lib/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 <link href="../lib/met/css/met.css" rel="stylesheet">
 <script src="../lib/jquery.min.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 <script src="../phonegap.js"></script>
 <script src="../lib/met/js/met.js"></script>
 <link href="../lib/met/images/shortcut-icon.png" rel="apple-touch-icon" sizes="180x180" />
+
+<style type="text/css">
+#map { height: 200px; }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path { display: none; }
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+</style>
 </head>
 <body onunload="exit();">
 <header id="canadahd">
@@ -54,29 +71,60 @@
  </div>
  <!-- /container -->
 </header>
-<div class="container content">
+<div class="container">
+  <h1>Flu Statistics</h1>
 
-  <section>
-    <div class="list-group">
-      <a href="vacsites.html" class="btn btn-default btn-block btn-lg">
-          <i class="fa fa-user-md fa-lg fa-fw"></i>
-        Vaccination Sites
-      </a>
-      <a href="map.html" class="btn btn-default btn-block btn-lg">
-          <i class="fa fa-map fa-lg fa-fw"></i>
-        Health Map
-      </a>
-      <a href="stats.html" class="btn btn-default btn-block btn-lg">
-        <i class="fa fa-line-chart fa-lg fa-fw"></i>
-        Flu Statistics
-      </a>
-      <a href="notices.html" class="btn btn-default btn-block btn-lg">
-        <i class="fa fa-newspaper-o fa-lg fa-fw"></i>
-        Notices
-      </a>
-    </div>
-  </section>
+  <div id="chart"></div>
 
+  <script src="lib/d3.min.js"></script>
+  <script>
+  var margin = {top: 20, right: 20, bottom: 30, left: 50};
+  var width = 280 - margin.left - margin.right;
+  var height = 300 - margin.top - margin.bottom;
+
+  var parseDate = d3.time.format("%Y-%m-%d").parse;
+  var x = d3.time.scale().range([0, width]);
+  var y = d3.scale.linear().range([height, 0]);
+  var xAxis = d3.svg.axis().tickFormat(d3.time.format("%b")).scale(x).orient("bottom");
+  var yAxis = d3.svg.axis().scale(y).orient("left");
+  var line = d3.svg.line().x(function(d) { return x(d.date); })
+                          .y(function(d) { return y(d.count); });
+  var svg = d3.select("#chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  d3.csv("lib/canada_data.csv", function(error, data) {
+    if (error) throw error;
+
+    data.forEach(function (d) {
+      d.date = parseDate(d.date);
+      d.count = +d.count;
+    });
+
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain(d3.extent(data, function(d) { return d.count; }));
+
+    svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Count");
+    svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+      .attr("d", line);
+  });
+  </script>
 </div>
 <!-- /container -->
 <br class="clearfix">
