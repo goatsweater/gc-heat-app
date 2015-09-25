@@ -102,7 +102,15 @@
                   }
               }).addTo(map);
   });
-  map.locate({setView: true, maxZoom: 16});
+  map.locate({setView: true, maxZoom: 13});
+
+  // denote the user location on the map
+  function followuser(e) {
+    var radius = e.accuracy / 2;
+    L.circle(e.latlng, radius).addTo(map);
+  }
+  map.on('locationfound', followuser);
+  map.locate({watch: true, maximumAge: 6000});
   </script>
 
   <div id="chart"></div>
